@@ -57,8 +57,10 @@ function createServer() {
 }
 
 function runBuild() {
+  const npmCommand = process.platform === "win32" ? "npm.cmd" : "npm";
+
   return new Promise((resolve, reject) => {
-    const child = spawn("npm.cmd", ["run", "build"], {
+    const child = spawn(npmCommand, ["run", "build"], {
       shell: true,
       stdio: "inherit",
       windowsHide: true,
