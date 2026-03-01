@@ -1,4 +1,4 @@
-# X-Men Frontend
+﻿# X-Men Frontend
 
 Projeto de portfolio front-end inspirado no universo X-Men, com foco em animacao, experiencia visual e arquitetura moderna em React.
 
@@ -101,7 +101,6 @@ src/
   pages/                  # HomePage e HeroPage
   services/               # integracoes externas (Marvel API)
   styles/                 # estilos globais
-legacy/static/            # versao antiga em HTML/CSS/JS puro
 ```
 
 ## Roadmap
