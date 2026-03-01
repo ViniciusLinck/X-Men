@@ -36,6 +36,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Verify navigation before deploy
+        run: npm run verify:pages
+        env:
+          VERIFY_BASE_PATH: /${{ github.event.repository.name }}/
+
       - name: Set base path for Vite
         run: echo "VITE_BASE_PATH=/${{ github.event.repository.name }}/" >> $GITHUB_ENV
 
